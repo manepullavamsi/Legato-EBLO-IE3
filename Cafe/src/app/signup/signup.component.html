@@ -1,0 +1,99 @@
+<div>
+    <div class="col-md-6 offset-md-3 mt-5">
+        <div class="card mx-auto">
+            <h1 class="card-header text-center">Register Here</h1>
+            <div class="card-body">
+                <form [formGroup]="signupform" (ngSubmit)="submit()">
+                    <div class="form-group">
+                            <label for="empName">Full Name</label>
+                            <input type="text" formControlName="empName" class="form-control" />
+                            <small class="err" *ngIf="empName.invalid && (empName.dirty || empName.touched)">
+                                    Please Enter Full-Name
+                            </small>
+                        </div>
+                    <div class="form-group">
+                            <label for="orgName">Organzation Name</label>
+                            <input type="text" formControlName="orgName" class="form-control" />
+                            <small class="err" *ngIf="orgName.invalid && (orgName.dirty || orgName.touched)">
+                                Please Enter Your Organzation Name !...
+                            </small>
+                        </div>
+                        <div class="form-group">
+                                <label for="empId">Employee Id</label>
+                                <input type="text" formControlName="empId" class="form-control" />
+                                <small class="err" *ngIf="empId.invalid && (empId.dirty || empId.touched)">
+                                    Please Enter Your Employee Id !...
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                    <label for="empEmail">Email</label>
+                                    <input type="text" formControlName="empEmail" class="form-control" />
+                                    <small class="err" *ngIf="empEmail.invalid && (empEmail.dirty || empEmail.touched)">
+                                        Please Enter Your Email Id !...
+                                    </small>
+                                </div>
+                            
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control" #pass />
+                        <small *ngIf="password.invalid && (password.dirty || password.touched)">
+                            <small class="err" *ngIf="password.errors.required">
+                                Password cannot be left blank
+                            </small>
+                            <small class="err" *ngIf="password.errors.minlength">
+                                Password must have minimum 8characters
+                            </small>
+                        </small>
+                    </div>
+                    <label>
+                    <input type="checkbox" (click)="toggleSelection($event)"> Show Password
+                </label>
+                <p *ngIf="checked" class="bg-light text-black">{{pass.value}}</p>
+<br/>
+                    <div class="form-group">
+                        <label for="firstName">Mobile Number</label>
+                        <input type="text" formControlName="mobile" class="form-control" />
+                        <small class="err" *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)">
+                            Enter a valid 10 digit Mobile Number
+                        </small>
+                    </div>
+                    <br/>
+                    <div class="input-group form-group">
+                        <!-- <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload Profile Image</span>
+                          </div> -->
+                        <div class="custom-file">
+                            <input type="file" #imageInput class="custom-file-input" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01" (change)="onFileChanged($event)" formControlName="image" class="form-control">
+                            <label class="custom-file-label" for="inputGroupFile01">Upload Id Card</label>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- <div class="input-group">
+                            <div>
+                              <label for="username"><h3>Select Image</h3></label><br/>
+                          </div>
+                              <div>
+                              <input #imageInput class="image" type="file" (change)="onFileChanged($event)"/>
+                          </div>
+                          </div>  -->
+
+                    <div class="form-group text-center">
+
+                        <!-- <button id="re" (click)="tologin()" value="log In" class="btn btn-primary float-right">
+                            Already Registerd ?
+                        </button> -->
+                        <button [disabled]="!signupform.valid"  class="btn btn-primary float-right">
+                            SignUp
+                        </button>
+                        <button [routerLink]="['/login']" Style=" margin-left: 30px;" class="btn btn-primary float-right">
+                            LogIn
+                        </button>
+          
+                    </div>
+                </form>
+            </div>
+        </div>
+      
+    </div>
+</div>

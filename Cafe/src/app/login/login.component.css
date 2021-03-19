@@ -1,0 +1,11 @@
+.card{
+    margin-bottom: 10%;
+  }
+  #re{
+      margin-left: 2%;
+  }
+  small{
+      color: red;
+      font-size: 13px;
+      font-style: italic;
+  }

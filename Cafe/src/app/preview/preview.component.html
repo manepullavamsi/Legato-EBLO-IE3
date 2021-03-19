@@ -1,0 +1,105 @@
+<!-- <div>
+<img src="{{employee.image}}" height="100px" width="100px" style="border-radius:50%">
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <td>Name : </td>
+            <td>{{employee.empName1}}</td>
+        </tr>
+        <tr>
+            <td>Organzational Name : </td>
+            <td>{{employee.orgName1}}</td>
+        </tr>
+        <tr>
+            <td>Employee Id : </td>
+            <td>{{employee.empId1}}</td>
+        </tr>
+        <tr>
+            <td>E-mail Id : </td>
+            <td>{{employee.empEmail1}}</td>
+        </tr>
+        <tr>
+            <td>Mobile Number : </td>
+            <td>{{employee.mobile1}}</td>
+        </tr>
+        
+
+    </table>
+</div>
+</div> -->
+
+<div class="card" style="width: 25rem; margin-top:50px;">
+    <img src="{{employee.image}}" height="100px" width="100px" style="border-radius:50%" alt="profile">
+    
+    <!-- <ul class="list-group list-group-flush">
+          <li class="list-group-item"></li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul> -->
+    <div class="table-responsive card-body">
+        <table class="table">
+            <tr>
+                <td>Name : </td>
+                <td>{{employee.empName1}}</td>
+            </tr>
+            <tr>
+                <td>Organzational Name : </td>
+                <td>{{employee.orgName1}}</td>
+            </tr>
+            <tr>
+                <td>Employee Id : </td>
+                <td>{{employee.empId1}}</td>
+            </tr>
+            <tr>
+                <td>E-mail Id : </td>
+                <td>{{employee.empEmail1}}</td>
+            </tr>
+            <tr>
+                <td>Mobile Number : </td>
+                <td>{{employee.mobile1}}</td>
+            </tr>
+
+
+        </table>
+    </div>
+    <div class="card-body">
+        <div ><button style="text-align: left" [routerLink]="['/singup']" class="btn btn-primary float-left">Edit</button>
+            <button style="text-align: right" (click)="Submit()" style="margin-left: 200px" class="btn btn-primary float-right">Submit</button></div> 
+    </div>
+</div>
+
+
+<!-- 
+<div>
+    <div class="col-md-6 offset-md-3 mt-5">
+        <div class="card mx-auto">
+            <h1 class="card-header text-center">Preview</h1>
+            <div class="card-body table-responsive ">
+                    <table class="table">
+                            <tr>
+                                <td>Name : </td>
+                                <td>{{employee.empName1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Organzational Name : </td>
+                                <td>{{employee.orgName1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Employee Id : </td>
+                                <td>{{employee.empId1}}</td>
+                            </tr>
+                            <tr>
+                                <td>E-mail Id : </td>
+                                <td>{{employee.empEmail1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile Number : </td>
+                                <td>{{employee.mobile1}}</td>
+                            </tr>
+                
+                
+                        </table>
+            </div>
+        </div>
+    </div>
+</div> -->
